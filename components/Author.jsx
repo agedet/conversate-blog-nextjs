@@ -1,6 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 
+import { grpahCMSImageLoader } from '../util';
+
 const Author = ({ author }) => {
   return (
     <div className='text-center mt-20 mb-8 p-12 relative rounded-lg bg-black bg-opacity-20'>
@@ -8,6 +10,7 @@ const Author = ({ author }) => {
         {/* <Image
           alt='author.name'
           unoptimized
+          // loader={graphCMSImageLoader}
           height="100px"
           width="100px"
           className="align-middle rounded-full"
@@ -15,13 +18,13 @@ const Author = ({ author }) => {
 
         /> */}
         <h3 className='text-white mt-4 mb-4 text-xl font-bold'>
-          {author.name}
+          {/* {author.name} */}
         </h3>
-        <p className='text-white text-lg'>{author.bio}</p>
+        {/* <p className='text-white text-ls'>{author.bio}</p> */}
       </div>
         
     </div>
   )
 }
 
-export default Author
+export default Author;
