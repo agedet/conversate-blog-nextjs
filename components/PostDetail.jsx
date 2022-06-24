@@ -54,16 +54,16 @@ const PostDetail = ({ post }) => {
         <div className='px-4 lg:px-0'>
           <div className='flex items-center mb-8 w-full'>
             <div className='flex items-center mb-4 lg:mb-0 w-full lg:w-auto mr-8'>
-              {/* <img
+              <img
                 alt={post.author.name}
                 height="30px"
                 width="30px"
                 className="align-middle rounded-full"
                 src={post.author.photo.url}
-              /> */}
-              {/* <p className='inline align-middle text-gray-700 ml-2 text-lg'>
+              /> 
+               <p className='inline align-middle text-gray-700 ml-2 text-lg'>
                 {post.author.name}
-              </p> */}
+              </p>
             </div>
             <div className='font-medium text-gray-700'>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">

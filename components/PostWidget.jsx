@@ -31,7 +31,6 @@ const PostWidget = ({ categories, slug }) => {
                 width="60px"
                 className="align-middle rounded-full"
                 src={post.featuredImage.url}
-              
               />
             </div>
 
@@ -50,4 +49,4 @@ const PostWidget = ({ categories, slug }) => {
   )
 }
 
-export default PostWidget
+export default PostWidget;

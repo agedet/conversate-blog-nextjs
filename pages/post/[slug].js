@@ -47,11 +47,9 @@ const PostDetails = ( { post }) => {
                     <Categories />
                 </div>
             </div>
-
         </div>
-        PostDetails
     </div>
   )
 }
 
-export default PostDetails
+export default PostDetails;
