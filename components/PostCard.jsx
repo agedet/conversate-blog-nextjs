@@ -2,11 +2,12 @@ import React from 'react'
 import moment from 'moment';
 import Link from 'next/link';
 
-const PostCard = ({ post }) => {
+const PostCard = ({ post, category }) => {
   console.log(post);
+  console.log(category);
 
   return (
-    <div className='bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8'>
+    <div className='bg-white shadow-lg rounded-lg p-0 pb-8 lg:pb-12 mb-8'>
         <div className='relative overflow-hidden shadow-md pb-80 mb-8'>
           <img
             src={post.featuredImage.url}
@@ -15,14 +16,17 @@ const PostCard = ({ post }) => {
             rounded-t-lg lg:rounded-lg"
           />
         </div>
+          {/* <p className="text-right text-sm text-pink-700 font-normal px-2 lg:px-10 mb-4">
+              {post.categories.name}
+          </p> */}
         <h1 className='transition duration-700 text-center mb-8 cursor-pointer 
-          hover:text-pink-600 text-3xl font-semibold'>
+          hover:text-pink-600 text-3xl font-semibold lg:text-2x1'>
             <Link href={`/post/${post.slug}`}>
               {post.title}
             </Link>
         </h1>
-        <div className='bloc lg:flex text-center items-center justify-center mb-8'>
-          <div className='flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8'>
+        <div className='bloc lg:flex flex-col text-center items-center justify-center mb-8'>
+          <div className='flex items-center justify-center mb-4 md:flex items-center justify-center lg:mb-0 w-full lg:w-auto mr-8'>
             <img
               alt={post.author.name}
               height="30px"
@@ -43,7 +47,7 @@ const PostCard = ({ post }) => {
             </span>
           </div>
         </div>
-        <p className='text-center text-lg text-gray-700 font-normal px-4 lg:px-20 mb-8'>
+        <p className='text-justify text-sm text-gray-700 font-normal px-2 sm:px-10 md:px-10 lg:px-10 mb-8'>
           {post.excerpt}
         </p>
         <div className='text-center'>
