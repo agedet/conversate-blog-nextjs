@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import { getCategories, getCategoryPost } from '../../services';
 import { PostCard, Categories, Loader } from '../../components';
+import { getCategories, getCategoryPost } from '../../services';
 
 const CategoryPost = ({ posts }) => {
 
@@ -38,7 +38,7 @@ export async function getStaticProps({ params }) {
   return {
     props: { posts },
   };
-}
+};
 
 // Specify dynamic routes to pre-render pages based on data.
 // The HTML is generated at build time and will be reused on each request.
@@ -48,4 +48,4 @@ export async function getStaticPaths() {
       paths: categories.map(({ slug }) => ({ params: { slug } })),
       fallback: true,
     };
-  }
+};
